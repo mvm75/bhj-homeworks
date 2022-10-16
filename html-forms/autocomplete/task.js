@@ -10,6 +10,7 @@ class Autocomplete {
     this.registerEvents();
   }
 
+
   registerEvents() {
     this.valueContainer.addEventListener( 'click', e => {
       this.searchInput.classList.add( 'autocomplete__search_active' );
@@ -40,6 +41,7 @@ class Autocomplete {
     });
   }
 
+  
   onSelect( item ) {
     this.input.selectedIndex = item.index;
     this.valueElement.textContent = item.text;
