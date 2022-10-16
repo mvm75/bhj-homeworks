@@ -1,4 +1,3 @@
-
 const vidget = document.querySelector('.chat-widget');
 vidget.addEventListener("click", () => {
     vidget.classList.add('chat-widget_active');
@@ -72,12 +71,9 @@ function delayRobotMessage() {
 
 input.addEventListener('keydown', (e) => {
     delayRobotMessage();
-
-    if (e.key === 'Enter') {  
-        if (this.value !== "") {
-            printUserMessage();
-            robotMessage();
-        }
+    if (e.key === 'Enter' && input.value.trim() !== "") {
+        printUserMessage();
+        robotMessage();
     }
 })
 
